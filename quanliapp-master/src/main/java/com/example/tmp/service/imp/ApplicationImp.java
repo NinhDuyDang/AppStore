@@ -31,6 +31,8 @@ public class ApplicationImp implements ApplicationService {
     public void deleteApplication(Integer id){
         applicationRepo.deleteById(id);
     }
-
+     public List<Application> searchApplications(String query) {
+        List<Application> application = ApplicationRepo.searchApplicationSQL(query);
+        return  applicationRepo.searchApplicationBy(name);
 
 }
