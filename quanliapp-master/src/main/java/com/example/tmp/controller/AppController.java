@@ -129,4 +129,9 @@ public class AppController {
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + application.get().getFile_path() + "\"")
                 .body(optionalFileDB.get().getData());
     }*/
+    @GetMapping("/search/name")
+    public ResponseEntity<List<Application>> searchProducts(@RequestParam("query") String query){
+        return ResponseEntity.ok(ApplicationService.searchApplication(query));
+    }
+    
 }
