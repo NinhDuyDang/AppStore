@@ -13,6 +13,8 @@ public interface ApplicationService {
     public Application updateApplication(Application application);
     public Optional<Application> findApplicationById(Integer id);
     public void deleteApplication(Integer id);
-
+    public  static List<Application> searchApplication(String query) {
+        
+    }
 
 }
